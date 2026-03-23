@@ -7,12 +7,9 @@ import InputField from '../components/InputField/InputField';
 //Log in Button
 import SubmitButton from '../components/SubmitButton/SubmitButton';
 
-export default function LogInScreen({ navigation }: any) {
+export default function LogInScreen() {
   //handle log in
-  function handleLogin() {
-    // Navigate to the Tab navigator after login
-    navigation.navigate('Welcome');
-  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Oops! I don’t see anything… 😅</Text>
@@ -26,7 +23,7 @@ export default function LogInScreen({ navigation }: any) {
       />
       <InputField placeholder="Username" />
       <InputField placeholder="Password" secure={true} />
-      <SubmitButton title="Log in" onPress={() => handleLogin()} />
+      <SubmitButton title="Log in" />
     </View>
   );
 }

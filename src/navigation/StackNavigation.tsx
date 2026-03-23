@@ -5,14 +5,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 //screens
 import LogInScreen from '../screens/LogInScreen';
-import ProfileScreen from '../screens/ProfileScreen';
 import WelcomeScreen from '../screens/WelcomeScreen';
 
 //types
 export type RootStackParamList = {
   LogIn: undefined;
   Welcome: undefined;
-  Profile: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
