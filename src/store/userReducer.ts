@@ -4,7 +4,6 @@ const initialState = {
   name: '',
 };
 
-
 export const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_USER_NAME:

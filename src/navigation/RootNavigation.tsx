@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 //screen
 import LogInScreen from '../screens/LogInScreen';
 import TabNavigation from './TabNavigation';
+//Redux selector
+import { useSelector } from 'react-redux';
 
 export type RootNavigationParam = {
   LogIn: undefined;
@@ -12,11 +13,12 @@ export type RootNavigationParam = {
 
 const Stack = createNativeStackNavigator<RootNavigationParam>();
 export default function RootNavigation() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true); // simple state, replace with real auth
+  //Selector
+  const name = useSelector(state => state.name);
 
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      {!isLoggedIn ? (
+      {!name ? (
         <Stack.Screen name="LogIn" component={LogInScreen} />
       ) : (
         <Stack.Screen name="Welcome" component={TabNavigation} />
