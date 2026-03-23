@@ -1,10 +1,7 @@
-import { View, Text } from 'react-native';
 import React from 'react';
 //Tab nav
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-//Stack
-import StackNavigation from './StackNavigation';
 //Screens
 import ProfileScreen from '../screens/ProfileScreen';
 import WelcomeScreen from '../screens/WelcomeScreen';

@@ -4,20 +4,21 @@
  *
  * @format
  */
-
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-
 //nav container
 import { NavigationContainer } from '@react-navigation/native';
 import RootNavigation from './src/navigation/RootNavigation';
 
+//Redux
+import { Provider } from 'react-redux';
+import { store } from './src/store/store';
+
 function App() {
   return (
-    <SafeAreaProvider>
+    <Provider store={store}>
       <NavigationContainer>
         <RootNavigation />
       </NavigationContainer>
-    </SafeAreaProvider>
+    </Provider>
   );
 }
 

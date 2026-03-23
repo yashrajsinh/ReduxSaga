@@ -1,5 +1,5 @@
 import { View, Text, Image, StyleSheet } from 'react-native';
-import React, { useState } from 'react';
+import React from 'react';
 
 //InputText component
 import InputField from '../components/InputField/InputField';
