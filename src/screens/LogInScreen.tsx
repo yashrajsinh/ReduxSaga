@@ -1,5 +1,5 @@
 import { View, Text, Image, StyleSheet } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 
 //InputText component
 import InputField from '../components/InputField/InputField';
@@ -7,7 +7,12 @@ import InputField from '../components/InputField/InputField';
 //Log in Button
 import SubmitButton from '../components/SubmitButton/SubmitButton';
 
-export default function LogInScreen() {
+export default function LogInScreen({ navigation }: any) {
+  //handle log in
+  function handleLogin() {
+    // Navigate to the Tab navigator after login
+    navigation.navigate('Welcome');
+  }
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Oops! I don’t see anything… 😅</Text>
@@ -21,7 +26,7 @@ export default function LogInScreen() {
       />
       <InputField placeholder="Username" />
       <InputField placeholder="Password" secure={true} />
-      <SubmitButton title="Log in" />
+      <SubmitButton title="Log in" onPress={() => handleLogin()} />
     </View>
   );
 }

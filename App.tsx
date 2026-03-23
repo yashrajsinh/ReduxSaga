@@ -4,16 +4,19 @@
  *
  * @format
  */
-import { StyleSheet, Text, View } from 'react-native';
+
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import LogInScreen from './src/screens/LogInScreen';
+
+//nav container
+import { NavigationContainer } from '@react-navigation/native';
+import StackNavigation from './src/navigation/StackNavigation';
 
 function App() {
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1, backgroundColor: '#FFF8F0' }}>
-        <LogInScreen />
-      </SafeAreaView>
+      <NavigationContainer>
+        <StackNavigation />
+      </NavigationContainer>
     </SafeAreaProvider>
   );
 }
