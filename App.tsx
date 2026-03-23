@@ -9,13 +9,13 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 //nav container
 import { NavigationContainer } from '@react-navigation/native';
-import StackNavigation from './src/navigation/StackNavigation';
+import RootNavigation from './src/navigation/RootNavigation';
 
 function App() {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <StackNavigation />
+        <RootNavigation />
       </NavigationContainer>
     </SafeAreaProvider>
   );
