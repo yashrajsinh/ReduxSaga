@@ -6,9 +6,22 @@ import InputField from '../components/InputField/InputField';
 
 //Log in Button
 import SubmitButton from '../components/SubmitButton/SubmitButton';
+//Redux
+import { useDispatch } from 'react-redux';
+
+//action
+import { setUserName } from '../store/userAction';
 
 export default function LogInScreen() {
-  //handle log in
+  //useState vars to access data temp
+  const [userName, setUser] = useState('');
+  const [password, setPassword] = useState('');
+  //Dispatch redux
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(setUserName(userName));
+  };
 
   return (
     <View style={styles.container}>
@@ -21,9 +34,18 @@ export default function LogInScreen() {
         style={styles.logo}
         resizeMode="contain"
       />
-      <InputField placeholder="Username" />
-      <InputField placeholder="Password" secure={true} />
-      <SubmitButton title="Log in" />
+      <InputField
+        placeholder="Username"
+        value={userName}
+        onChangeText={setUser}
+      />
+      <InputField
+        placeholder="Password"
+        secure={true}
+        value={password}
+        onChangeText={setPassword}
+      />
+      <SubmitButton title="Log in" onPress={() => handleClick()} />
     </View>
   );
 }
