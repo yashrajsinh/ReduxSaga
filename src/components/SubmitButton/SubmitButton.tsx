@@ -33,13 +33,15 @@ export default function SubmitButton({
 }
 const styles = StyleSheet.create({
   button: {
-    paddingVertical: 10,
-    paddingHorizontal: 10,
-    borderRadius: 8,
+    paddingVertical: 14,
+    borderRadius: 10,
     alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
   },
   text: {
     color: '#fff',
-    fontWeight: 'bold',
+    fontWeight: '600',
+    fontSize: 16,
   },
 });
