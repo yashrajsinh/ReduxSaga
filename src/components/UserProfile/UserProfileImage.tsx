@@ -6,7 +6,7 @@ export default function UserProfileImage() {
     <View>
       <Image
         source={{
-          uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyZxt3SRlGCb8f3HOKAm8PbAt4WBAhHvQbzQ&s',
+          uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPkztwfFdcsPmJWS1X5gZat4L_5WXleKkCYg&s',
         }}
         style={styles.image}
       />
