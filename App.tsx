@@ -11,13 +11,18 @@ import RootNavigation from './src/navigation/RootNavigation';
 //Redux
 import { Provider } from 'react-redux';
 import { store } from './src/store/store';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 function App() {
   return (
     <Provider store={store}>
-      <NavigationContainer>
-        <RootNavigation />
-      </NavigationContainer>
+      <SafeAreaProvider>
+        <SafeAreaView style={{ flex: 1 }}>
+          <NavigationContainer>
+            <RootNavigation />
+          </NavigationContainer>
+        </SafeAreaView>
+      </SafeAreaProvider>
     </Provider>
   );
 }

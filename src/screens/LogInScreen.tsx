@@ -10,7 +10,7 @@ import SubmitButton from '../components/SubmitButton/SubmitButton';
 import { useDispatch } from 'react-redux';
 
 //action
-import { setUserName } from '../store/userAction';
+import { setUserName } from '../store/user/userAction';
 
 export default function LogInScreen() {
   //useState vars to access data temp
